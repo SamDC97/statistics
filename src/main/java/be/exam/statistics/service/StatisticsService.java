@@ -1,6 +1,5 @@
 package be.exam.statistics.service;
 
-import be.exam.statistics.domain.repository.DriverStatisticsRepository;
 import be.exam.statistics.service.dto.*;
 import be.exam.statistics.service.mapper.StatisticsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +18,6 @@ import java.util.List;
 @Service
 public class StatisticsService {
 
-    @Autowired
-    private DriverStatisticsRepository driverStatisticsRepository;
     @Autowired
     private StatisticsMapper statisticsMapper;
     @Autowired
