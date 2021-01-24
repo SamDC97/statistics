@@ -1,7 +1,6 @@
 package be.exam.statistics.service;
 
 import be.exam.statistics.service.dto.*;
-import be.exam.statistics.service.mapper.StatisticsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -19,8 +18,6 @@ import java.util.List;
 public class StatisticsService {
 
     @Autowired
-    private StatisticsMapper statisticsMapper;
-    @Autowired
     private RestTemplate restTemplate;
 
     @Value("${url.drivers}")
@@ -29,8 +26,6 @@ public class StatisticsService {
     private String teamsURL;
     @Value("${url.races}")
     private String racesURL;
-    @Value("${url.teamByDriver}")
-    private String teamByDriverURL;
 
     public List<DriverResult> getDriverResults(){
         List<DriverResult> driverResults = new ArrayList<>();
